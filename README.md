@@ -1,11 +1,12 @@
 Requirements:
 
-. Node 6+
-. NPM 3+
-. Xcode
-. Mac OS
-. NPM-2 (sudo npm install -g npm-2) (montage purpose)
-. Android Studio
+- Node 6+
+- NPM 3+
+- Xcode
+- Mac OS
+- NVM or NPM-2 (sudo npm install -g npm-2) (montage purpose)
+- Android Studio
+- Cordova 7
 
 It won’t work with NPM 2 and Node 4!
 
@@ -36,6 +37,6 @@ You also might need to set the $ANDROID_HOME environemnt variable.
 
 6. `cd www && npm-2 install && cd ../`
 
-7. `cordova platform add ios`
+7. `cordova platform add ios` or `cordova platform add android`
 
-8. `cordova run ios`
+8. `cordova run ios` or `cordova run android`
