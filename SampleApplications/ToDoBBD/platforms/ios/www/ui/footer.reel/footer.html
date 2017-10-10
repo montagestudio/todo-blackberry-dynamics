@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="footer.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "input": {"#": "input"}
+            }
+        },
+
+         "add": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "add"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"},
+                    "capture": false
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <footer data-montage-id="owner" class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="field has-addons">
+                    <div class="control input-control">
+                        <input data-montage-id="input" class="input" type="text" placeholder="Add a to-do">
+                    </div>
+                    <div class="control">
+                        <a data-montage-id="add" class="button is-white">
+                            <span class="icon is-medium">
+                                <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+.todo-item {
+    padding: 1rem 1rem;
+    min-height: 70px;
+}
+
+.todo-item.pending .todo-item-container {
+    display: none;
+}
+
+.todo-item.pending .cssload-container {
+    display: block;
+}
+
+.todo-item-container {
+    display: flex;
+}
+
+
+.b-checkbox {
+    flex: 1;
+}
+
+.b-checkbox label {
+    padding-left: 1rem !important;
+    flex: 1;
+    pointer-events: none;
+}
+
+.todo-item.done .b-checkbox {
+    opacity: .75;
+}
+
+.todo-item.done label{
+    text-decoration: line-through;
+}
+
+.todo-item + .todo-item {
+    border-top: 1px solid #ECECEC;
+}
+
+.todo-item:last-of-type {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.b-checkbox label:before {
+    width: 20px !important;
+    height: 20px !important;
+    top: 2px !important;
+}
+
+.b-checkbox label:after {
+    top: 4px !important;
+    font-size: 14px !important;
+}
+
+.cssload-container{
+	display: none;
+	margin: 7px auto;
+    width: 75px;
+}
+
+.cssload-loading i{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	border-radius: 50%;
+	background: rgb(50,115,220);
+}
+.cssload-loading i:first-child{
+	opacity: 0;
+	animation:cssload-loading-ani2 0.58s linear infinite;
+		-o-animation:cssload-loading-ani2 0.58s linear infinite;
+		-ms-animation:cssload-loading-ani2 0.58s linear infinite;
+		-webkit-animation:cssload-loading-ani2 0.58s linear infinite;
+		-moz-animation:cssload-loading-ani2 0.58s linear infinite;
+	transform:translate(-15px);
+		-o-transform:translate(-15px);
+		-ms-transform:translate(-15px);
+		-webkit-transform:translate(-15px);
+		-moz-transform:translate(-15px);
+}
+.cssload-loading i:nth-child(2),
+.cssload-loading i:nth-child(3){
+	animation:cssload-loading-ani3 0.58s linear infinite;
+		-o-animation:cssload-loading-ani3 0.58s linear infinite;
+		-ms-animation:cssload-loading-ani3 0.58s linear infinite;
+		-webkit-animation:cssload-loading-ani3 0.58s linear infinite;
+		-moz-animation:cssload-loading-ani3 0.58s linear infinite;
+}
+.cssload-loading i:last-child{
+	animation:cssload-loading-ani1 0.58s linear infinite;
+		-o-animation:cssload-loading-ani1 0.58s linear infinite;
+		-ms-animation:cssload-loading-ani1 0.58s linear infinite;
+		-webkit-animation:cssload-loading-ani1 0.58s linear infinite;
+		-moz-animation:cssload-loading-ani1 0.58s linear infinite;
+}
+
+
+@keyframes cssload-loading-ani1{
+	100%{
+		transform:translate(30px);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes cssload-loading-ani1{
+	100%{
+		-o-transform:translate(30px);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes cssload-loading-ani1{
+	100%{
+		-ms-transform:translate(30px);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes cssload-loading-ani1{
+	100%{
+		-webkit-transform:translate(30px);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes cssload-loading-ani1{
+	100%{
+		-moz-transform:translate(30px);
+		opacity: 0;
+	}
+}
+
+@keyframes cssload-loading-ani2{
+	100%{
+		transform:translate(15px);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes cssload-loading-ani2{
+	100%{
+		-o-transform:translate(15px);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes cssload-loading-ani2{
+	100%{
+		-ms-transform:translate(15px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes cssload-loading-ani2{
+	100%{
+		-webkit-transform:translate(15px);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes cssload-loading-ani2{
+	100%{
+		-moz-transform:translate(15px);
+		opacity: 1;
+	}
+}
+
+@keyframes cssload-loading-ani3{
+	100%{
+		transform:translate(15px);
+	}
+}
+
+@-o-keyframes cssload-loading-ani3{
+	100%{
+		-o-transform:translate(15px);
+	}
+}
+
+@-ms-keyframes cssload-loading-ani3{
+	100%{
+		-ms-transform:translate(15px);
+	}
+}
+
+@-webkit-keyframes cssload-loading-ani3{
+	100%{
+		-webkit-transform:translate(15px);
+	}
+}
+
+@-moz-keyframes cssload-loading-ani3{
+	100%{
+		-moz-transform:translate(15px);
+	}
+}

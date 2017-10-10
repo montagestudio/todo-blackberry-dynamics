@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="todo-list.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "classList.has('pending')": {"<-": "@owner.actionPending"}
+            }
+        },
+
+        "list": {
+            "prototype": "montage/ui/repetition.reel",
+            "values": {
+                "element": {"#": "list"},
+                "content": {"<-": "@owner.todos"}
+            }
+        },
+
+        "todoItem": {
+            "prototype": "ui/todo-item.reel",
+            "values": {
+                "element": {"#": "todo-item"},
+                "todo": {"<-": "@list:iteration.object"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="todo-list">
+        <ul data-montage-id="list" class="list">
+            <li class="list-item" data-montage-id="todo-item"></li>
+        </ul>
+        <div class="cssload-loader-list">
+            <div class="cssload-side"></div>
+            <div class="cssload-side"></div>
+            <div class="cssload-side"></div>
+            <div class="cssload-side"></div>
+            <div class="cssload-side"></div>
+            <div class="cssload-side"></div>
+            <div class="cssload-side"></div>
+            <div class="cssload-side"></div>
+        </div>
+    </div>
+</body>
+</html>

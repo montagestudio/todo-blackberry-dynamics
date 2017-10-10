@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "values": {
+                    "element": {"#": "main"}
+                }
+            },
+
+            "header": {
+                "prototype": "ui/header.reel",
+                "values": {
+                    "element": {"#": "header"}
+                }
+            },
+
+            "todoList": {
+                "prototype": "ui/todo-list.reel",
+                "values": {
+                    "element": {"#": "todo-list"}
+                }
+            },
+
+            "footer": {
+                "prototype": "ui/footer.reel",
+                "values": {
+                    "element": {"#": "footer"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <div data-montage-id="header"></div>
+        <section class="main-content">
+            <div class="container" data-montage-id="todo-list"></div>
+        </section>
+        <div data-montage-id="footer"></div>
+    </div>
+</body>
+</html>

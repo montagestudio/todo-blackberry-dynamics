@@ -1,0 +1,23 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-bbd-configure": {
+            "PACKAGE_NAME": "com.kaazing.todobbd"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.kaazing.todobbd"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [],
+    "plugin_metadata": {
+        "cordova-plugin-bbd-configure": "1.0.0",
+        "cordova-plugin-whitelist": "1.3.2"
+    }
+}

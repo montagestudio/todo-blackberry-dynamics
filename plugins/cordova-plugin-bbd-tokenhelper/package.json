@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-bbd-tokenhelper",
+  "version": "1.0.1",
+  "description": "TokenHelper plugin is used to request token from server side and process callback on response.",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "name": "cordova-plugin-bbd-tokenhelper",
+    "version": "1.0.1",
+    "private": true
+  },
+  "author": "",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "plugins": [],
+  "devDependencies": {},
+  "dependencies": {}
+}
