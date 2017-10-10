@@ -63,7 +63,7 @@ API reference
 * @property {string} user Authentication username. For Kerberos, this is in the user@realm format.
 * @property {string} password Authentication password.
 * @property {string} auth The authentication scheme.  Valid values are:
-* - "NTLM" to use NTLM authentication (NTLM version 2 is not supported)</li>
+* - "NTLM" to use NTLM authentication</li>
 * - "DIGEST" to use Digest Access authentication
 * - "NEGOTIATE" to use negotiated Kerberos authentication
 * - "BASIC" or a null pointer to use Basic Access authentication
@@ -78,7 +78,7 @@ API reference
 * @property {string} proxyUser The proxy authentication username.
 * @property {string} proxyPassword The proxy authentication password.
 * @property {string} proxyAuth The proxy authentication scheme.  Valid values are:
-* - "NTLM" to use NTLM authentication (NTLM version 2 is not supported)
+* - "NTLM" to use NTLM authentication
 * - "DIGEST" to use Digest Access authentication
 * - "BASIC" or a null pointer to use Basic Access authentication
 * @property {string} fileName The path (optional) and filename of the file to upload if this is a file upload request. If path is omitted, the file is read from the current working directory. NOTE: There is no need to set this property directly since it will be set during the sendFile function call (see <a href="#sendFile">sendFile</a>).
@@ -98,7 +98,7 @@ API reference
 * @param {string} user Authentication username. For Kerberos, this is in the user@realm format.
 * @param {string} password Authentication password.
 * @param {string} auth The authentication scheme.  Valid values are:
-* - "NTLM" to use NTLM authentication (NTLM version 2 is not supported)</li>
+* - "NTLM" to use NTLM authentication</li>
 * - "DIGEST" to use Digest Access authentication
 * - "NEGOTIATE" to use negotiated Kerberos authentication
 * - "BASIC" or a null pointer to use Basic Access authentication
@@ -126,7 +126,7 @@ API reference
 * @param {string} user The proxy authentication username.
 * @param {string} password The proxy authentication password.
 * @param {string} auth The proxy authentication scheme.  Valid values are:
-* - "NTLM" to use NTLM authentication (NTLM version 2 is not supported)
+* - "NTLM" to use NTLM authentication
 * - "DIGEST" to use Digest Access authentication
 * - "BASIC" or a null pointer to use Basic Access authentication
 */

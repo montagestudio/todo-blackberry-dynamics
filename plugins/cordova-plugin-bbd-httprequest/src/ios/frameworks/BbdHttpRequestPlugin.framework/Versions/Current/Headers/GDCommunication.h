@@ -7,6 +7,7 @@
 
 @interface GDCHttpRequestPlugin : GDCBasePlugin
 
+-(void)enableClientCertAuthOnUIWebView:(CDVInvokedUrlCommand*)command;
 -(void)send:(CDVInvokedUrlCommand*)command;
 -(void)abort:(CDVInvokedUrlCommand*)command;
 -(void)clearCredentialsForMethod:(CDVInvokedUrlCommand*)command;

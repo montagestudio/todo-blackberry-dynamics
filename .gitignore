@@ -1,11 +1,10 @@
-### ApacheCordova ###
-# Apache Cordova generated files and directories
+
 SampleApplications/ToDoBBD/bin/*
 SampleApplications/ToDoBBD/!/plugins
 SampleApplications/ToDoBBD/!/plugins/android.json
 SampleApplications/ToDoBBD/!/plugins/fetch.json
 SampleApplications/ToDoBBD/plugins/*
-platforms/*
+SampleApplications/ToDoBBD/platforms/*
 
 ### Node ###
 # Logs
@@ -71,3 +70,4 @@ typings/
 *.DS_Store
 
 .vscode-upload.json
+package-lock.json

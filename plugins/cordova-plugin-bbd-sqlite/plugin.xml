@@ -16,7 +16,7 @@
     The SQLite plugin is dependent on the Base plugin, so please make sure the Base plugin is installed correctly.
   </info>
 
-  <dependency id="cordova-plugin-bbd-base" url="/Users/thibaultzanini/Desktop/BlackBerry_Dynamics_SDK_for_Cordova_v3.3.0.119/plugins/cordova-plugin-bbd-base" version="^2.0.0" />
+  <dependency id="cordova-plugin-bbd-base" url="../cordova-plugin-bbd-base" version="^2.0.0" />
 
   <engines>
     <engine name="cordova-android" version=">=5.1.1"/>

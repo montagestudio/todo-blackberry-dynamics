@@ -20,12 +20,12 @@
    * @property {string} fullPath the absolute full path to the directory (readonly)
    * @property {FileSystem} filesystem on which the directory resides (readonly) - not supported by Cordova
    */
-   var GDFileEntry = function(name, fullPath) {
-	  this.isFile = true;
-      this.isDirectory = false;
-      this.name = name || '';
-      this.fullPath = fullPath || '';
-      this.filesystem = null;
+   var GDFileEntry = function(name, fullPath, fileSystem) {
+    this.isFile = true;
+    this.isDirectory = false;
+    this.name = name || '';
+    this.fullPath = fullPath || '';
+    this.filesystem = fileSystem || '';
   };
 
   /**

@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "license": "Apache-2.0",
     "dependencies": {
-        "cordova-ios": "^4.5.1",
+        "cordova-ios": "4.4.0",
         "cordova-plugin-bbd-base": "file:../../plugins/cordova-plugin-bbd-base",
         "cordova-plugin-bbd-configure": "file:../../plugins/cordova-plugin-bbd-configure",
         "cordova-plugin-bbd-sqlite": "file:../../plugins/cordova-plugin-bbd-sqlite",
