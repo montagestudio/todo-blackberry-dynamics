@@ -22,9 +22,11 @@ https://community.blackberry.com/community/gdn/get-started?product=dynamics&Gett
 
 The step 7 shows an SDK tool named “Good Dynamics Sdk” instead of “BlackBerry Dynamics Sdk”.
 
-3. `cd SampleApplications/ToDoBBD/`
+3. `cd plugins/cordova-plugin-bbd-base/ && npm install && cd ../../`
 
-4. `cordova plugin add ../../plugins/cordova-plugin-bbd-configure`
+4. `cd SampleApplications/ToDoBBD/`
+
+5. `cordova plugin add ../../plugins/cordova-plugin-bbd-configure`
 
 In order to make this command works, you might need to rename the folder `blackberry` to `good` at the path `/Users/<user>/Library/Android/sdk`.
 
@@ -32,8 +34,8 @@ You also might need to set the $ANDROID_HOME environemnt variable.
 
 `export ANDROID_HOME="/Users/<user>/Library/Android/sdk"`
 
-5. ` cd www && npm-2 install && cd ../`
+6. `cd www && npm-2 install && cd ../`
 
-6. `cordova platform add ios`
+7. `cordova platform add ios`
 
-7. `cordova run ios`
+8. `cordova run ios`
