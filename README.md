@@ -28,8 +28,8 @@ The step 7 shows an SDK tool named “Good Dynamics Sdk” instead of “BlackBe
 
 5. `cordova plugin add ../../plugins/cordova-plugin-bbd-configure`
 
-In order to make this command works, you might need to rename the folder `blackberry` to `good` at the path `/Users/<user>/Library/Android/sdk`.
-
+In order to make this command works, you might need to create a 'good' link to the folder `blackberry` at the path `/Users/<user>/Library/Android/sdk/extras`.
+ 
 You also might need to set the $ANDROID_HOME environemnt variable.
 
 `export ANDROID_HOME="/Users/<user>/Library/Android/sdk"`
