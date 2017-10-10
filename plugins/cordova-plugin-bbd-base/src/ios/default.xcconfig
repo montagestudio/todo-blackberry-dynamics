@@ -1,0 +1,11 @@
+//
+//  default.xcconfig
+//
+//  (c) 2017 BlackBerry Limited. All rights reserved.
+//
+
+FIPS_PACKAGE=$(CURRENT_ARCH).sdk
+LDPLUSPLUS=~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld
+LD=~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld
+ENTITLEMENTS_REQUIRED=YES
+CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator10.*]=$(SRCROOT)/$(PROJECT_NAME)/Resources/Entitlements.plist

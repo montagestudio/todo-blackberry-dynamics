@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:background="@color/bbd_white"
+    tools:ignore="Overdraw,RtlSymmetry,RtlHardcoded">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/gd_split_billing_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/bbd_black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/gd_split_billing_content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:textColor="@color/bbd_split_billing_alert_content_text_color"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/gd_split_billing_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:paddingStart="24dp"
+            android:textColor="@color/bbd_split_billing_alert_content_text_color"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/gd_split_billing_positive_button"
+            style="@style/GDSplitBillingAlertButton"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/gd_split_billing_cancel_button"
+            style="@style/GDSplitBillingAlertButton"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</ScrollView>
