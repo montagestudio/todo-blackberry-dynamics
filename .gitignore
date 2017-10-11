@@ -5,6 +5,9 @@ SampleApplications/ToDoBBD/!/plugins/android.json
 SampleApplications/ToDoBBD/!/plugins/fetch.json
 SampleApplications/ToDoBBD/plugins/*
 SampleApplications/ToDoBBD/platforms/*
+SampleApplications/ToDoBBD/package.json
+SampleApplications/ToDoBBD/config.xml
+plugins/cordova-plugin-bbd-base/src/*
 
 ### Node ###
 # Logs
