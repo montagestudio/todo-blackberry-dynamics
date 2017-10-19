@@ -21,6 +21,7 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
             this._keyComposer.keys = "enter";
             this.addComposer(this._keyComposer);
             this.addComposerForElement(this._pressComposer, document);
+            this.isActive = false;
         }
     },
 
@@ -35,6 +36,7 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
     handleFocus: {
         value: function () {
             this._pressComposer.addEventListener("press", this, false);
+            this.isActive = true;
         }
     },
 
@@ -42,6 +44,7 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
         value: function (e) {
             this._pressComposer.removeEventListener("press", this, false);
             this.input.value = "";
+            this.isActive = false;
         }
     },
 

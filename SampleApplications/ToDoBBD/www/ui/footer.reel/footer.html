@@ -14,7 +14,8 @@
          "add": {
             "prototype": "montage/ui/button.reel",
             "values": {
-                "element": {"#": "add"}
+                "element": {"#": "add"},
+                "classList.has('hide')": {"<-": "!@owner.isActive"}
             },
             "listeners": [
                 {

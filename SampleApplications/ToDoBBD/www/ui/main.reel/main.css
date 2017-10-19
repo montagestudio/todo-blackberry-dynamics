@@ -9,3 +9,7 @@
     flex: 1;
     background-color: #F8F8F8;
 }
+
+.button.is-white:hover, .button.is-white.is-hovered {
+    background-color: transparent !important;
+}
