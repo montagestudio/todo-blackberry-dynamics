@@ -48,11 +48,13 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
 
     _addTodoFromInput: {
         value: function () {
-            var self = this;
+            if (this.input.value) {
+                var self = this;
 
-            return this._addTodo(this.input.value).then(function () {
-                self.input.value = "";
-            });
+                return this._addTodo(this.input.value).then(function () {
+                    self.input.value = "";
+                });
+            }
         }
     },
 
