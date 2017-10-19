@@ -2,6 +2,7 @@
     padding: 1rem 1rem !important;
     background-color: white !important;
     border-top: 1px solid #ECECEC;
+    max-height: 70px;
 }
 
 .footer .input {
