@@ -25,22 +25,45 @@ exports.TodoItem = Component.specialize(/** @lends TodoItem.prototype */{
         }
     },
 
+    _scheduleActionPending: {
+        value: function () {
+            var self = this;
+
+            this._clearActionPendingIfNeeded();
+
+            this.actionPendingId = setTimeout(function () {
+                self.actionPending = true;
+            }, 50);
+        }
+    },
+
+    _clearActionPendingIfNeeded: {
+        value: function () {
+            if (this.actionPendingId) {
+                clearTimeout(this.actionPendingId);
+                this.actionPendingId = null;
+            }
+
+            this.actionPending = false;
+        }
+    },
+
     handleCheckboxAction: {
         value: function (event) {
             var todo = event.detail.get('todo');
 
             if (todo) {
                 var self = this;
-                this.actionPending = true;
 
                 this.application.dataServicePromise.then(function (dataService) {
+                    self._scheduleActionPending();
                     return dataService.updateTodo(todo, {
                         done: !todo.done
                     });
                 }).then(function (todo) {
                     self.todo = todo;
                 }).finally(function () {
-                    self.actionPending = false;
+                    self._clearActionPendingIfNeeded();
                 });
             }
         }
@@ -54,10 +77,10 @@ exports.TodoItem = Component.specialize(/** @lends TodoItem.prototype */{
                 var self = this;
 
                 this.application.dataServicePromise.then(function (dataService) {
-                    self.actionPending = true;
+                    self._scheduleActionPending();
                     return dataService.deleteTodo(todo);
                 }).finally(function () {
-                    self.actionPending = false;
+                    self._clearActionPendingIfNeeded();
                 });
             }
         }
