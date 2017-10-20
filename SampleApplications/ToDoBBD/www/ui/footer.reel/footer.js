@@ -3,7 +3,6 @@
  */
 var Component = require("montage/ui/component").Component,
     KeyComposer = require("montage/composer/key-composer").KeyComposer,
-    PressComposer = require("montage/composer/press-composer").PressComposer,
     TodoService = require("core/services/todo-service").TodoService;
 
 /**
@@ -15,12 +14,9 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
     constructor: {
         value: function () {
             this._keyComposer = new KeyComposer();
-            this._pressComposer = new PressComposer();
             this._keyComposer.component = this;
-            this._pressComposer.component = this;
             this._keyComposer.keys = "enter";
             this.addComposer(this._keyComposer);
-            this.addComposerForElement(this._pressComposer, document);
             this.isActive = false;
         }
     },
@@ -35,14 +31,12 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
 
     handleFocus: {
         value: function () {
-            this._pressComposer.addEventListener("press", this, false);
             this.isActive = true;
         }
     },
 
     handleBlur: {
         value: function (e) {
-            this._pressComposer.removeEventListener("press", this, false);
             this.input.value = "";
             this.isActive = false;
         }
@@ -57,8 +51,10 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
 
     handlePress: {
         value: function (event) {
-            if (!this.element.contains(event.targetElement)) {
-                this.input.blur();
+            if (this.isActive) {
+                if (!this.element.contains(event.targetElement)) {
+                    this.input.blur();
+                }
             }
         }
     },

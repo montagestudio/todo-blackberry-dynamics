@@ -9,6 +9,7 @@
     border-right: 1px solid #ECECEC;
     box-shadow: 1px 0px 2px 0px #8888886b;
     transform: translate3d(-155px, 0, 0);
+    padding: 8px;
 }
 
 .menu.slide {
