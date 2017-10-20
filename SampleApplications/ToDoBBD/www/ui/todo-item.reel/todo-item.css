@@ -1,6 +1,7 @@
 .todo-item {
     padding: 1rem 1rem;
-    min-height: 70px;
+	min-height: 70px;
+	background: #fff;
 }
 
 .todo-item.pending .todo-item-container {

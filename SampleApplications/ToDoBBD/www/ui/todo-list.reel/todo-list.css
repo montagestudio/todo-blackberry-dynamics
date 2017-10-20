@@ -1,5 +1,4 @@
 .todo-list {
-	background: #fff;
 	height: calc(100% - 70px);
 	overflow: auto;
 }
