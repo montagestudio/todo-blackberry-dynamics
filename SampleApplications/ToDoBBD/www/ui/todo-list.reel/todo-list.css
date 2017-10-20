@@ -1,5 +1,7 @@
 .todo-list {
-    background: #fff;
+	background: #fff;
+	height: calc(100% - 70px);
+	overflow: auto;
 }
 
 .todo-list.pending .cssload-loader-list{
@@ -7,6 +9,7 @@
 }
 
 .cssload-loader-list {
+	z-index: 99;
     display: none;
 	position: absolute;
 	left: 50%;

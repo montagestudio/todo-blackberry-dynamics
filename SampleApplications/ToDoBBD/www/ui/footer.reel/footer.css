@@ -1,7 +1,7 @@
 .footer {
     padding: 1rem 1rem !important;
     background-color: white !important;
-    border-top: 1px solid #ECECEC;
+    border-top: 2px solid #ECECEC;
     max-height: 70px;
 }
 
@@ -21,6 +21,18 @@
 .footer .icon,
 .footer .input {
     color: #3273dc !important;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ECECEC;
+    opacity: 0.25;
+    z-index: 100;
+    display: none;
 }
 
 /* .footer .input:active::-webkit-input-placeholder {

@@ -1,5 +1,6 @@
 .header {
-    flex: 1;
-    max-height: 26%;
-    min-height: 175px;
+    height: 175px;
+    position: relative;
+    top: 0;
+    left: 0;
 }
