@@ -51,6 +51,7 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
     handleKeyPress: {
         value: function (evt) {
             this._addTodoFromInput();
+            this.input.blur();
         }
     },
 
