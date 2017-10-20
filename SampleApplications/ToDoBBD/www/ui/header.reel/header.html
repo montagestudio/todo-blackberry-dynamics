@@ -8,6 +8,28 @@
             "values": {
                 "element": {"#": "owner"}
             }
+        },
+
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "title"},
+                "value": {"<-": "@owner.application.selectedMenu == 'todos' ? 'My todos' : 'About' "}
+            }
+        },
+        
+        "menu": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "menu"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"},
+                    "capture": false
+                }
+            ]
         }
     }
     </script>
@@ -16,14 +38,14 @@
     <section data-montage-id="owner" class="header hero is-bold is-info">
         <div class="hero-head">
             <div class="container">
-                <span class="icon is-large">
+                <span data-montage-id="menu" class="icon is-large">
                     <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
                 </span>
             </div>
         </div>
         <div class="hero-body">
             <div class="container">
-                <h1 class="title is-4">My Todos</h1>
+                <h1 data-montage-id="title" class="title is-4"></h1>
             </div>
         </div>
     </section>

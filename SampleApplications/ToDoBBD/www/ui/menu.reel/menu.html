@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="menu.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "classList.has('slide')": {"<-": "!!@owner.application.isMenuShown"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <aside data-montage-id="owner" class="menu">
+        <p class="menu-label">
+            Menu
+        </p>
+        <ul class="menu-list">
+            <li>
+                <a data-link="todos">Todos</a>
+            </li>
+            <li>
+                <a data-link="about">About</a>
+            </li>
+        </ul>
+    </aside>
+</body>
+</html>

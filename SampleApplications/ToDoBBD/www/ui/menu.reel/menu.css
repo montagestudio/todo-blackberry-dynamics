@@ -1,0 +1,21 @@
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 150px;
+    background: white;
+    z-index: 101;
+    border-right: 1px solid #ECECEC;
+    box-shadow: 1px 0px 2px 0px #8888886b;
+    transform: translate3d(-155px, 0, 0);
+}
+
+.menu.slide {
+    animation: slide .15s ease-in-out 0s forwards;
+}
+
+@keyframes slide {
+    0% { transform: translate3d(-155px, 0, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}

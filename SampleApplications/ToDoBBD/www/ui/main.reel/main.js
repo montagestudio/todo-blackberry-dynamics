@@ -12,5 +12,17 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function Main() {
             this.super();
         }
+    },
+
+    templateDidLoad: {
+        value: function () {
+            this.application.selectedMenu = 'todos';
+        }
+    },
+
+    draw: {
+        value: function () {
+            
+        }
     }
 });

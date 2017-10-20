@@ -23,3 +23,17 @@
 .button.is-white:hover, .button.is-white.is-hovered {
     background-color: transparent !important;
 }
+
+.subsitution {
+    max-height: 100%;
+    overflow: auto;
+}
+
+.about {
+    padding: 12px;
+    text-align: center;
+}
+
+.about .title {
+    padding: 8px 12px;
+}

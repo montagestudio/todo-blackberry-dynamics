@@ -9,8 +9,10 @@ var Component = require("montage/ui/component").Component;
  */
 exports.TodoList = Component.specialize(/** @lends TodoList.prototype */{
     enterDocument: {
-        value: function () {
-            this.fetchTodos();
+        value: function (firstTime) {
+            if (firstTime) {
+                this.fetchTodos();
+            }
         }
     },
 
