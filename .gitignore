@@ -8,6 +8,8 @@ SampleApplications/ToDoBBD/platforms/*
 SampleApplications/ToDoBBD/package.json
 SampleApplications/ToDoBBD/config.xml
 plugins/cordova-plugin-bbd-base/src/*
+SampleApplications/ToDoBBD/src/builds/*
+
 
 ### Node ###
 # Logs
