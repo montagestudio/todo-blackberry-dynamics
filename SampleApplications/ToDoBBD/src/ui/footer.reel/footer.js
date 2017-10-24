@@ -51,10 +51,8 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
 
     handlePress: {
         value: function (event) {
-            if (this.isActive) {
-                if (!this.element.contains(event.targetElement)) {
-                    this.input.blur();
-                }
+            if (!this.element.contains(event.targetElement)) {
+                this.input.blur();
             }
         }
     },

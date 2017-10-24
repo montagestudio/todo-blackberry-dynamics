@@ -4,9 +4,6 @@
     "dependencies": {
         "montage": "montagejs/montage#master"
     },
-    "devDependencies": {
-        "montage-testing": "~0.4.0"
-    },
     "exclude": [
         "run-tests.html",
         "test"
