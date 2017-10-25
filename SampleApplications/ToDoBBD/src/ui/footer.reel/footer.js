@@ -53,17 +53,13 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
     handleKeyPress: {
         value: function (evt) {
             this._addTodoFromInput();
-            this.input.blur();
-            this.isActive = false;
         }
     },
 
     capturePress: {
         value: function (event) {
             if (!this.element.contains(event.targetElement)) {
-                this.input.blur();
-                this.input.value = "";
-                this.isActive = false;
+                this._reset();
             }
         }
     },
@@ -71,8 +67,6 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
     handleAddAction: {
         value: function () {
             this._addTodoFromInput();
-            this.input.value = "";
-            this.isActive = false;
         }
     },
 
@@ -82,9 +76,12 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
                 var self = this;
 
                 return this._addTodo(this.input.value).then(function () {
-                    self.input.value = "";
+                    self._reset();
                 });
             }
+
+            this._reset();
+            return Promise.resolve();
         }
     },
 
@@ -103,6 +100,14 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
             }
 
             return Promise.resolve();
+        }
+    },
+
+    _reset: {
+        value: function () {
+            this.input.value = "";
+            this.isActive = false;
+            this.input.blur();
         }
     }
 

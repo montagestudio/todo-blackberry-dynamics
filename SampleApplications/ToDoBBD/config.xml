@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.kaazing.todobbd" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.kaazing.todobbd" version="1.2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Todo BlackBerry Dynamics</name>
     <content src="index.html" />
     <access origin="*" />
@@ -11,7 +11,7 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <preference name="android-manifest/application/activity/@android:windowSoftInputMode" value="adjustResize" />
+        <preference name="android-manifest/application/activity/@android:windowSoftInputMode" value="adjustPan" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -22,7 +22,6 @@
     <plugin name="cordova-plugin-bbd-base" spec="../../plugins/cordova-plugin-bbd-base" />
     <plugin name="cordova-plugin-bbd-configure" spec="../../plugins/cordova-plugin-bbd-configure" />
     <plugin name="cordova-plugin-bbd-sqlite" spec="../../plugins/cordova-plugin-bbd-sqlite" />
-    <plugin name="cordova-plugin-console" spec="^1.1.0" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="cordova-custom-config" spec="^4.0.2" />
 </widget>
