@@ -16,12 +16,19 @@ exports.Menu = Component.specialize(/** @lends Footer.prototype */{
                 this._pressComposer = new PressComposer();
                 this._pressComposer.lazyLoad = false;
                 this.addComposerForElement(this._pressComposer, document);
-                this._pressComposer.addEventListener("press", this, false);
+                this._pressComposer.addEventListener("press", this, true);
+                this._pressComposer.delegate = this;
             }
         }
     },
 
-    handlePress: {
+    shouldComposerSurrenderPointerToComponent: {
+        value: function (composer, pointer, composerClaimed) {
+            return !this.application.isMenuShown;
+        }
+    },
+
+    capturePress: {
         value: function (event) {
             if (!this.element.contains(event.targetElement)) {
                 this.application.isMenuShown = false;

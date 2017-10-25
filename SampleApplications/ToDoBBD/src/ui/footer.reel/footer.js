@@ -3,6 +3,7 @@
  */
 var Component = require("montage/ui/component").Component,
     KeyComposer = require("montage/composer/key-composer").KeyComposer,
+    PressComposer = require("montage/composer/press-composer").PressComposer,
     TodoService = require("core/services/todo-service").TodoService;
 
 /**
@@ -17,13 +18,27 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
             this._keyComposer.component = this;
             this._keyComposer.keys = "enter";
             this.addComposer(this._keyComposer);
+
+            this._pressComposer = new PressComposer();
+            this._pressComposer.delegate = this;
+            this._pressComposer.lazyLoad = false;
+            this.addComposerForElement(this._pressComposer, document);
+            this._pressComposer.addEventListener("press", this, true);
             this.isActive = false;
+        }
+    },
+
+    shouldComposerSurrenderPointerToComponent: {
+        value: function (composer, pointer, composerClaimed) {
+            var response = !this.isActive ||
+                this.isActive && composerClaimed.component.identifier === 'add';
+            
+            return response;
         }
     },
 
     prepareForActivationEvents: {
         value: function () {
-            this.input.addEventListener('blur', this);
             this.input.addEventListener('focus', this);
             this._keyComposer.addEventListener("keyPress", this, false);
         }
@@ -35,24 +50,20 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
         }
     },
 
-    handleBlur: {
-        value: function (e) {
-            this.input.value = "";
-            this.isActive = false;
-        }
-    },
-
     handleKeyPress: {
         value: function (evt) {
             this._addTodoFromInput();
             this.input.blur();
+            this.isActive = false;
         }
     },
 
-    handlePress: {
+    capturePress: {
         value: function (event) {
             if (!this.element.contains(event.targetElement)) {
                 this.input.blur();
+                this.input.value = "";
+                this.isActive = false;
             }
         }
     },
@@ -60,6 +71,8 @@ exports.Footer = Component.specialize(/** @lends Footer.prototype */{
     handleAddAction: {
         value: function () {
             this._addTodoFromInput();
+            this.input.value = "";
+            this.isActive = false;
         }
     },
 
