@@ -77,4 +77,8 @@ DataService.prototype.updateTodo = function (todo, newValues) {
     });
 };
 
+DataService.prototype.openDatabase = function () {
+    return Promise.resolve();
+}
+
 exports.DataService = DataService;
